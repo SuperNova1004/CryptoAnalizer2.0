@@ -16,16 +16,16 @@ public class Encode {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                StringBuilder encryptedLine = new StringBuilder();
+                StringBuilder encodeLine = new StringBuilder();
                 for (char c : line.toCharArray()) {
                     if (Character.isLetter(c)) {
                         char base = Character.isLowerCase(c) ? 'a' : 'A';
-                        encryptedLine.append((char) ((((c - base) + key) % 26) + base));
+                        encodeLine.append((char) ((((c - base) + key) % 26) + base));
                     } else {
-                        encryptedLine.append(c);
+                        encodeLine.append(c);
                     }
                 }
-                writer.write(encryptedLine.toString());
+                writer.write(encodeLine.toString());
                 writer.newLine();
             }
         } catch (IOException e) {

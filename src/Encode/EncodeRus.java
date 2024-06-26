@@ -12,16 +12,16 @@ public class EncodeRus {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                StringBuilder encryptedLine = new StringBuilder();
+                StringBuilder encodeRusLine = new StringBuilder();
                 for (char c : line.toCharArray()) {
                     if (Character.isLetter(c)) {
                         char base = Character.isLowerCase(c) ? 'а' : 'А';
-                        encryptedLine.append((char) ((((c - base) + key) % 32) + base));
+                        encodeRusLine.append((char) ((((c - base) + key) % 32) + base));
                     } else {
-                        encryptedLine.append(c);
+                        encodeRusLine.append(c);
                     }
                 }
-                writer.write(encryptedLine.toString());
+                writer.write(encodeRusLine.toString());
                 writer.newLine();
             }
         } catch (IOException e) {
