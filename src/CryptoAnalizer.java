@@ -30,6 +30,6 @@ public class CryptoAnalizer extends StartMessage {
     }
 
     public static void decode(String inputFile, String outputFile, int key) {
-        encode(inputFile, outputFile, 26 - key); // потому что в англ. алфавите 26 букв
+        encode(inputFile, outputFile, 26 - key); // потому что в англ. алфавите 26 букв, а в русском 33
     }
 }
