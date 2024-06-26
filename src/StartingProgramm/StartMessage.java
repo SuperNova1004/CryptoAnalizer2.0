@@ -3,6 +3,8 @@ package StartingProgramm;
 public class StartMessage {
 
     public static void console() {
+
+
         System.out.println("Чтобы работать с Криптоанализатором: ");
         System.out.println(" ");
         System.out.println(" 1. Введите сообщение, которое хотите зашифровать в файл input.txt");
