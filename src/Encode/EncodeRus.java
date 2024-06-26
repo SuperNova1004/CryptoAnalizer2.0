@@ -16,7 +16,7 @@ public class EncodeRus {
                 for (char c : line.toCharArray()) {
                     if (Character.isLetter(c)) {
                         char base = Character.isLowerCase(c) ? 'а' : 'А';
-                        encodeRusLine.append((char) ((((c - base) + key) % 32) + base));
+                        encodeRusLine.append((char) ((((c - base) + key) % 33) + base));
                     } else {
                         encodeRusLine.append(c);
                     }
