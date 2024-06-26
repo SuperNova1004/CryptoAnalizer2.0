@@ -1,6 +1,9 @@
+package StartingProgramm;
 
-
-
+import static Decode.Decode.decode;
+import static Decode.DecodeRus.decodeRus;
+import static Encode.Encode.encode;
+import static Encode.EncodeRus.encodeRus;
 
 public class ConsoleRunner extends CryptoAnalizer {
 
